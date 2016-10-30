@@ -8,6 +8,10 @@ import java.awt.*;
  */
 public class PanelMain extends JPanel {
 
+    private int width;
+
+    private int height;
+
     @Override
     public void paintComponent(Graphics g) {
         this.paintBackground(g);
@@ -27,7 +31,17 @@ public class PanelMain extends JPanel {
         //背景图
         Image background = new ImageIcon("graphics/background/Sea.jpg").getImage();
         //默认panel背景分辨率
-        g.drawImage(background,0,0,800,600,0,0,800,450,null);
+        g.drawImage(background,0,0,this.width,this.height,0,0,800,450,null);
+    }
+
+    public PanelMain setWidth(int width) {
+        this.width = width;
+        return this;
+    }
+
+    public PanelMain setHeight(int height) {
+        this.height = height;
+        return this;
     }
 }
 

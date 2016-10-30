@@ -27,7 +27,14 @@ public class Layer {
     private int borderPanel;
 
 
-
+    /**
+     *
+     * @param x  边框左上角点x坐标
+     * @param y  边框左上角点y坐标
+     * @param width 边框内宽度
+     * @param height    边框内高度
+     * @param borderPanel Panel边框厚度
+     */
     public Layer(int x, int y, int width, int height, int borderPanel) {
         this.x = x;
         this.y = y;
